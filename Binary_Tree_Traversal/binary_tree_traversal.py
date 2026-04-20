@@ -3,6 +3,11 @@ Docstring for Binary_Tree_Traversal.binary_tree_traversal
 """
 
 class Node:
+
+    """
+    Binary Tree ADT
+    """
+
     def __init__(self, v):
         self.left = None
         self.right = None
@@ -17,17 +22,10 @@ def pre_order(node):
 
     nodes = []
 
-    if node is None:
-        return None
-
-    # Visit Node
-    nodes.append(node.data)
-
-    # Traverse left subtree
-    pre_order(node.left)
-
-    # Traverse right subtree
-    pre_order(node.right)
+    if node:
+        nodes.append(node.data)
+        nodes.extend(pre_order(node.left))
+        nodes.extend(pre_order(node.right))
 
     return nodes
 
@@ -41,17 +39,11 @@ def in_order(node):
     nodes = []
 
     if node:
-        # Traverse left subtree
-        in_order(node.left)
-
-        # Visit node
+        nodes = in_order(node.left)
         nodes.append(node.data)
-
-        # Traverse right subtree
-        in_order(node.right)
+        nodes.extend(in_order(node.right))
 
     return nodes
-
 
 # Post-order traversal
 def post_order(node):
@@ -62,16 +54,9 @@ def post_order(node):
 
     nodes = []
 
-    if node is None:
-        return None
-
-    # Traverse left subtree
-    post_order(node.left)
-
-    # Traverse right subtree
-    post_order(node.right)
-
-    # Visit Node
-    nodes.append(node.data)
+    if node:
+        nodes = post_order(node.left)
+        nodes.extend(post_order(node.right))
+        nodes.append(node.data)
 
     return nodes
