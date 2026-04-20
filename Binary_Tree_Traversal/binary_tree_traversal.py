@@ -2,17 +2,6 @@
 Docstring for Binary_Tree_Traversal.binary_tree_traversal
 """
 
-class Node:
-
-    """
-    Binary Tree ADT
-    """
-
-    def __init__(self, v):
-        self.left = None
-        self.right = None
-        self.data = v
-
 # Pre-order traversal
 def pre_order(node):
 
