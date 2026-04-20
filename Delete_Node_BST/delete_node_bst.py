@@ -2,8 +2,8 @@
 Docstring for Delete_Node_BST.delete_node_bst
 """
 
-from Binary_Tree_ADT.tree import BinaryTree
 from typing import Optional
+from Binary_Tree_ADT.tree import BST
 
 class Solution:
 
@@ -11,7 +11,7 @@ class Solution:
     Docstring for Solution
     """
 
-    def delete_node(self, root: Optional[BinaryTree], key: int) -> Optional[BinaryTree]:
+    def delete_node(self, root: Optional[BST], key: int) -> Optional[BST]:
 
         """
         Docstring for delete_node
