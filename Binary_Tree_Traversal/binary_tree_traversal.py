@@ -38,7 +38,20 @@ def in_order(node):
     Docstring for in_order
     """
 
-    return []
+    nodes = []
+
+    if node:
+        # Traverse left subtree
+        in_order(node.left)
+
+        # Visit node
+        nodes.append(node.data)
+
+        # Traverse right subtree
+        in_order(node.right)
+
+    return nodes
+
 
 # Post-order traversal
 def post_order(node):
