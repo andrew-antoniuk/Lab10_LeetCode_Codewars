@@ -8,7 +8,7 @@ class Node:
     Binary Tree ADT
     """
 
-    def __init__(self, data):
-        self.left = None
-        self.right = None
-        self.data = data
+    def __init__(self, l, r, v):
+        self.left = l
+        self.right = r
+        self.value = v
