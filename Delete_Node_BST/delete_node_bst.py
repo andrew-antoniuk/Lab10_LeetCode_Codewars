@@ -3,7 +3,7 @@ Docstring for Delete_Node_BST.delete_node_bst
 """
 
 from typing import Optional
-from Binary_Tree_ADT.tree import BST as TreeNode
+from Binary_Tree_ADT.trees import BST as TreeNode
 
 class Solution:
 
