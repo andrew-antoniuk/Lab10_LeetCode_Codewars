@@ -2,7 +2,7 @@
 Docstring for Binary_Tree_ADT.tree
 """
 
-class Node:
+class BinaryTree:
 
     """
     Binary Tree ADT
