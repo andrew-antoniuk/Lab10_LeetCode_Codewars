@@ -60,4 +60,18 @@ def post_order(node):
     Docstring for post_order
     """
 
-    return []
+    nodes = []
+
+    if node is None:
+        return None
+
+    # Traverse left subtree
+    post_order(node.left)
+
+    # Traverse right subtree
+    post_order(node.right)
+
+    # Visit Node
+    nodes.append(node.data)
+
+    return nodes
